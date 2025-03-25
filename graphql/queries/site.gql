@@ -1,0 +1,25 @@
+query Site($id:ID!){
+	site(id:$id) {		
+		id
+		name
+		domain 
+		media{
+			id
+			file_name
+		}
+		pages{
+			id
+			name
+			entities{
+				id
+				name
+				nodes{
+					id
+					label
+					value
+				}
+			}
+		}
+		created_at
+	}   
+}
